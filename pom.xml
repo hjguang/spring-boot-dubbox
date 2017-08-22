@@ -88,11 +88,6 @@
 			</dependency>
 			<!-- jboos rest end -->
 
-			<!-- <dependency>
-				<groupId>org.apache.tomcat.embed</groupId>
-				<artifactId>tomcat-embed-core</artifactId>
-				<version>${tomcat.version}</version>
-			</dependency> -->
 			<dependency>
 				<groupId>org.apache.tomcat.embed</groupId>
 				<artifactId>tomcat-embed-logging-juli</artifactId>
