@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	   http://code.alibabatech.com/schema/dubbo
+	   http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- dubbo扫描Service-->
+   <dubbo:annotation package="org.spring.boot.dubbox.provider.service"/>
+
+    <dubbo:application name="provider" owner="platin"/>
+
+    <dubbo:registry protocol="zookeeper" address="zookeeper://localhost:2181" />
+
+    <dubbo:protocol name="dubbo" serialization="kryo"  port="20990"  />
+
+    <!-- dobbox基于resteasy的REST接口发布，sever采用Tomcat -->
+    <dubbo:protocol name="rest" port="8090"  server="tomcat" />
+
+</beans>
