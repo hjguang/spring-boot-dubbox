@@ -16,7 +16,9 @@
 
     <dubbo:protocol name="dubbo" serialization="kryo"  port="20990"  />
 
-    <!-- dobbox基于resteasy的REST接口发布，sever采用Tomcat -->
+    <!-- dobbox基于resteasy的REST接口发布，sever采用Tomcat 
+      rest 日志功能	extension="com.alibaba.dubbo.rpc.protocol.rest.support.LoggingFilter"
+    -->
     <dubbo:protocol name="rest" port="8090"  server="tomcat" />
 
 </beans>
