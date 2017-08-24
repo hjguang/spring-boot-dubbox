@@ -9,8 +9,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	
-	<artifactId>spring-boot-dubbox-customer</artifactId>
-	<name>spring-boot-dubbox-customer</name>
+	<artifactId>spring-boot-dubbox-consumer</artifactId>
+	<name>spring-boot-dubbox-consumer</name>
 	<url>http://maven.apache.org</url>
 	
 	<properties>
