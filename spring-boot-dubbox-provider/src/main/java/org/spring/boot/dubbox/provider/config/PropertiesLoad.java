@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ImportResource;
  *
  */
 @Configuration
-@ImportResource("classpath:dubbo/dubbo.xml")
+@ImportResource("classpath:META-INF/spring/dubbo-provider.xml")
 public class PropertiesLoad {
 
 }
