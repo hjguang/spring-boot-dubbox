@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.spring.boot.dubbox.entity.TravelRecord">
+	<resultMap type="org.spring.boot.dubbox.entity.TravelRecord" id="BaseResultMap">
+		<result column="id" property="id"/>
+		<result column="user_id" property="userId"/>
+		<result column="traveldate" property="travelDate"/>
+		<result column="fee" property="fee"/>
+		<result column="days" property="days"/>
+	</resultMap>
+	
+	<select id="selectById"  parameterType="Integer"  resultMap="BaseResultMap">
+		select * from travelrecord where id=#{id}
+	</select>
+	
+	<select id="selectByPage"   resultMap="BaseResultMap">
+		select * from travelrecord
+	</select>
+</mapper>
